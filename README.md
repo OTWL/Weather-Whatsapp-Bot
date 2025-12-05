@@ -8,7 +8,9 @@
 
 Weather Oversight is a Python automation script that fetches real-time weather forecast data from **Open-Meteo** and sends a formatted weather update to a WhatsApp group using **pywhatkit**.
 
-Designed to run automatically (via cron or Task Scheduler), it reports the weather for the **next hour** in a clean WhatsApp message.
+Designed to run automatically (via Task Scheduler), it reports the weather for the **next hour** in a clean WhatsApp message.
+
+This script was made for fun and was made to be used only by me but I decided to uploaded just on the off chance that someone else needed this.
 
 ---
 
