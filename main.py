@@ -114,7 +114,7 @@ message =f"""*=== Weather OVersight ===*
 *Current Tyd:* {getCurrentTime(now)[11:16]}
 *Max Temperatuur:* {maxTemp}°C
 
-*VOORSPELLING VIR:* {time[11:16]}
+*Predection for:* {time[11:16]}
 ---------------------------
 *Temprature:* {weatherInfo['temperature_2m']}°C
 *Rain percentage:* {weatherInfo['precipitation_probability']}%
@@ -123,5 +123,6 @@ message =f"""*=== Weather OVersight ===*
 """
 
 sendMessage(message=message)
+
 
 print(message)
