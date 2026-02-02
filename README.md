@@ -97,4 +97,4 @@ closeTime = 30
 
 ## 📜 License
 
-Free to use, modify, and distribute.
+MIT
