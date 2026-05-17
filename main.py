@@ -11,7 +11,7 @@ baseUrl = "https://api.open-meteo.com/v1/forecast"
 
 def getResponse():
 
-    #Dictonary
+    #Dictionary
     apiParams = {
     "latitude": latitudeCord,
     "longitude": longitudeCord,
@@ -20,7 +20,7 @@ def getResponse():
     #Max temp for that day
     "daily": "temperature_2m_max", 
     "timezone": "auto",
-     "forecast_days": 2 #Amount of day's you want the weather forecast data to span
+     "forecast_days": 2 #Amount of days you want the weather forecast data to span
     }
    
     #Get weather data
@@ -58,7 +58,7 @@ def getValue(index,jsonResponse):
     baseString= jsonResponse['hourly']
     #Insert all weather data you want to pull
     weatherAspects = ["temperature_2m","precipitation_probability","cloud_cover","rain"]
-    #Creates dictonary of each aspect's and their value
+    #Creates dictionary of each aspect's and their value
     for weather in weatherAspects:
         weatherInfo[weather] = baseString[weather][index]
     
@@ -109,10 +109,10 @@ groupId = "groupID" #Insert Group ID
 
 maxTemp = jsonResponse["daily"]["temperature_2m_max"][0]
 
-message =f"""*=== Weather OVersight ===*
+message =f"""*=== Weather Oversight ===*
 ---------------------------
-*Current Tyd:* {getCurrentTime(now)[11:16]}
-*Max Temperatuur:* {maxTemp}°C
+*Current Time:* {getCurrentTime(now)[11:16]}
+*Max Temprature:* {maxTemp}°C
 
 *Predection for:* {time[11:16]}
 ---------------------------
@@ -121,7 +121,7 @@ message =f"""*=== Weather OVersight ===*
 *Amount of Rain:* {weatherInfo["rain"]}mm
 *Cloud Coverage:* {weatherInfo['cloud_cover']}%
 """
-
+#send whatsapp message
 sendMessage(message=message)
 
 
