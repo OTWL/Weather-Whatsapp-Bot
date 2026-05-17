@@ -69,7 +69,7 @@ def shouldProgramRun():
     isScriptActive = False
     now = datetime.datetime.now()
     currentHour = now.hour
-    #gives time of 10 o'clock and 24 o'clock
+    #gives the weather data of 10 o'clock and 24 o'clock as at ex. 9 o'clock we send 10 o'clocks weather data
     if (currentHour>=9) and (currentHour <=23):
         isScriptActive = True 
     return isScriptActive
