@@ -114,7 +114,7 @@ message =f"""*=== Weather Oversight ===*
 *Current Time:* {getCurrentTime(now)[11:16]}
 *Max Temprature:* {maxTemp}°C
 
-*Predection for:* {time[11:16]}
+*Prediction for:* {time[11:16]}
 ---------------------------
 *Temprature:* {weatherInfo['temperature_2m']}°C
 *Rain percentage:* {weatherInfo['precipitation_probability']}%
